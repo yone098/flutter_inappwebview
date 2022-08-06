@@ -2054,6 +2054,10 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate, WKNavi
             }
         })
     }
+        
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.contentOffset = CGPoint(x: 0, y: 0)
+    }
     
     /// UIScrollViewDelegate is somehow bugged:
     /// if InAppWebView implements the UIScrollViewDelegate protocol and implement the scrollViewDidScroll event,
